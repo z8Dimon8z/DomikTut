@@ -671,3 +671,57 @@
     }
   }
 }
+
+// ======================
+.proposal {
+
+  /* .proposal__container */
+  @include adaptiveValue("padding-top", 233,117);
+  @include adaptiveValue("padding-bottom", 294, 147);
+  background-image: url('@img/bg-rent.png');
+  background-size: cover;
+  &__container {}
+
+  /* .proposal__title */
+
+  &__title {
+    color: rgb(255, 255, 255);
+    font-family: Raleway;
+    @include adaptiveValue("font-size", 40, 20);
+    font-weight: 800;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    @include adaptiveValue("margin-bottom", 20, 10);
+  }
+
+  /* .proposal__text */
+
+  &__text {
+    color: rgb(255, 255, 255);
+    max-width: 360px;
+    font-family: Montserrat;
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 600;
+    line-height: 160%;
+    letter-spacing: 0%;
+    text-align: left;
+    @include adaptiveValue("margin-bottom", 60, 30);
+  }
+
+  /* .proposal__btn */
+
+  &__btn {
+    padding: 10px 50px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 18px;
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    border-radius: 200px;
+    background-color: rgb(244, 104, 63);
+  }
+}
