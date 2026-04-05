@@ -46,6 +46,7 @@
 		"gulp-zip": "^5.0.2",
 		"html-webpack-plugin": "^4.4.1",
 		"inputmask": "^5.0.9",
+		"ion-rangeslider": "^2.3.1",
 		"lightgallery": "^2.4.0",
 		"load-plugins": "^2.1.2",
 		"mini-css-extract-plugin": "2.4.7",
@@ -70,6 +71,7 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
+		"rangeslider.js": "^2.3.3",
 		"simplebar": "^5.3.3"
 	}
 }
