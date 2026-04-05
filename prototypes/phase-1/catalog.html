@@ -131,7 +131,7 @@
         <div class="card-h">
           <div class="card-h__photo">
             <div class="photo-placeholder" style="background: linear-gradient(135deg, #7B9EB3 0%, #4A7A9B 100%);"></div>
-            <button class="card-h__fav card-h__fav--active" title="Убрать из избранного">
+            <button class="card-h__fav card-h__fav--active" data-fav-id="1" title="Убрать из избранного">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8530A" stroke="#E8530A" stroke-width="2">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
               </svg>
@@ -197,7 +197,7 @@
         <div class="card-h">
           <div class="card-h__photo">
             <div class="photo-placeholder" style="background: linear-gradient(135deg, #8BA89C 0%, #5E8573 100%);"></div>
-            <button class="card-h__fav" title="Добавить в избранное">
+            <button class="card-h__fav" data-fav-id="2" title="Добавить в избранное">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
               </svg>
@@ -257,7 +257,7 @@
         <div class="card-h">
           <div class="card-h__photo">
             <div class="photo-placeholder" style="background: linear-gradient(135deg, #9EB3C5 0%, #6B8FA8 100%);"></div>
-            <button class="card-h__fav card-h__fav--active" title="Убрать из избранного">
+            <button class="card-h__fav card-h__fav--active" data-fav-id="3" title="Убрать из избранного">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8530A" stroke="#E8530A" stroke-width="2">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
               </svg>
@@ -323,7 +323,7 @@
         <div class="card-h">
           <div class="card-h__photo">
             <div class="photo-placeholder" style="background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);"></div>
-            <button class="card-h__fav" title="Добавить в избранное">
+            <button class="card-h__fav" data-fav-id="4" title="Добавить в избранное">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
               </svg>
@@ -383,7 +383,7 @@
         <div class="card-h">
           <div class="card-h__photo">
             <div class="photo-placeholder" style="background: linear-gradient(135deg, #7C9A6E 0%, #4E7A43 100%);"></div>
-            <button class="card-h__fav card-h__fav--active" title="Убрать из избранного">
+            <button class="card-h__fav card-h__fav--active" data-fav-id="5" title="Убрать из избранного">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8530A" stroke="#E8530A" stroke-width="2">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
               </svg>
@@ -593,36 +593,8 @@
   </div>
 </div>
 
-<!-- ===================== JS ===================== -->
-<script>
-  const overlay = document.getElementById('filterOverlay');
-  const openBtn = document.getElementById('openFilter');
-  const closeBtn = document.getElementById('closeFilter');
-  const applyBtn = document.getElementById('applyFilter');
-
-  openBtn.addEventListener('click', () => overlay.classList.add('is-open'));
-  closeBtn.addEventListener('click', () => overlay.classList.remove('is-open'));
-  applyBtn.addEventListener('click', () => overlay.classList.remove('is-open'));
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) overlay.classList.remove('is-open');
-  });
-
-  // Stepper
-  const stpVal = document.getElementById('stpVal');
-  document.getElementById('stpMinus').addEventListener('click', () => {
-    const v = parseInt(stpVal.textContent);
-    if (v > 1) stpVal.textContent = v - 1;
-  });
-  document.getElementById('stpPlus').addEventListener('click', () => {
-    stpVal.textContent = parseInt(stpVal.textContent) + 1;
-  });
-
-  // Reset
-  document.getElementById('resetFilter').addEventListener('click', () => {
-    document.querySelectorAll('.modal input[type="checkbox"]').forEach(cb => cb.checked = false);
-    stpVal.textContent = '1';
-  });
-</script>
+<script src="js/main.js"></script>
+<script src="js/catalog.js"></script>
 
 </body>
 </html>
