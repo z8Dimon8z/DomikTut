@@ -18,22 +18,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(20,20,38,0.88) 45%, rgba(20,20,38,0.3) 100%),
-    url('') center/cover no-repeat;
-  /* Simulated night house photo via CSS gradient */
-  background-color: #1A1A2E;
-}
-
-/* Simulated dark house photo */
-.hero__bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 75% 50%, #2C4A3E 0%, #1A2E28 30%, transparent 60%),
-    radial-gradient(ellipse at 85% 30%, #1E3A4A 0%, transparent 40%),
-    radial-gradient(ellipse at 60% 70%, #3A2E1A 0%, transparent 50%);
-  opacity: 0.7;
+    linear-gradient(to right, rgba(15,15,30,0.85) 40%, rgba(15,15,30,0.4) 100%),
+    url('https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
 }
 
 .hero__inner {
