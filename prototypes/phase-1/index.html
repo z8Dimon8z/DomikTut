@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOMIKTUT.RU — Аренда коттеджей и домов в Казани</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+
+      <a href="index.html" class="logo">
+        <svg class="logo__icon" viewBox="0 0 32 32" fill="none">
+          <path d="M16 3L2 14h4v15h8v-9h4v9h8V14h4L16 3z" fill="#E8530A"/>
+        </svg>
+        <span class="logo__text">DOMIKTUT.RU</span>
+      </a>
+
+      <div class="city-selector">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8530A" stroke-width="2">
+          <circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>
+        Казань
+        <span class="city-selector__arrow"></span>
+      </div>
+
+      <nav class="nav">
+        <a href="catalog.html" class="nav__link">Каталог</a>
+        <a href="#faq" class="nav__link">Частые вопросы</a>
+        <a href="#" class="nav__link">Сотрудничество</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="favorites.html" class="header__icon-btn" title="Избранное">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span class="header__favorite-count">3</span>
+        </a>
+        <button class="header__icon-btn" title="Поиск">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+        <a href="tel:+78435284548" class="header__phone">+7 (843) 528-45-48</a>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="container" style="width:100%">
+    <div class="hero__inner">
+
+      <!-- Left: title + thumbs -->
+      <div class="hero__content">
+        <h1 class="hero__title">Аренда коттеджей<br>и домов в Казани</h1>
+        <p class="hero__subtitle">Загородные дома с баней, бассейном и мангалом для семьи, компании или корпоратива. Бронирование без предоплаты.</p>
+
+        <div class="hero__thumbs">
+          <div class="hero__thumb hero__thumb--active">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#6B8FA8,#3A6580)"></div>
+          </div>
+          <div class="hero__thumb">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#8BA89C,#5E8573)"></div>
+          </div>
+          <div class="hero__thumb">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#9EB3C5,#6B8FA8)"></div>
+          </div>
+          <div class="hero__thumb">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#7C9A6E,#4E7A43)"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: search form -->
+      <div class="search-card">
+        <div class="search-card__title">Найти дом</div>
+
+        <div class="form-group">
+          <label class="form-label">Дата заезда</label>
+          <input type="date" class="form-input" value="2024-07-05">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Дата выезда</label>
+          <input type="date" class="form-input" value="2024-07-07">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Количество гостей</label>
+          <input type="number" class="form-input" placeholder="Например: 10" min="1" value="">
+        </div>
+
+        <div class="form-group" style="margin-bottom:0">
+          <label class="form-label">Город</label>
+          <select class="form-input">
+            <option>Казань и пригороды</option>
+            <option>Зеленодольск</option>
+            <option>Лаишево</option>
+          </select>
+        </div>
+
+        <a href="catalog.html" class="btn btn--primary search-card__btn" style="margin-top:18px;display:flex;">
+          Найти дом
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="about-section">
+  <div class="container">
+    <h2 class="about-section__title">О нас</h2>
+    <div class="advantages">
+
+      <div class="advantage">
+        <div class="advantage__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <div class="advantage__title">Более 50 объектов</div>
+        <div class="advantage__text">Большой выбор домов на любой вкус и бюджет — от уютных коттеджей до усадеб на 50+ гостей.</div>
+      </div>
+
+      <div class="advantage">
+        <div class="advantage__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <div class="advantage__title">Проверенные объекты</div>
+        <div class="advantage__text">Каждый дом проходит личную проверку. Фото и описание соответствуют реальности.</div>
+      </div>
+
+      <div class="advantage">
+        <div class="advantage__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <div class="advantage__title">Безопасное бронирование</div>
+        <div class="advantage__text">Оплата только при заезде. Никаких предоплат незнакомым людям.</div>
+      </div>
+
+      <div class="advantage">
+        <div class="advantage__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 14.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3.35h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10a16 16 0 0 0 6 6l.93-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17.4l.19-.48z"/>
+          </svg>
+        </div>
+        <div class="advantage__title">Поддержка 24/7</div>
+        <div class="advantage__text">Всегда на связи. Поможем выбрать дом, ответим на вопросы и решим любые проблемы.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POPULAR ===================== -->
+<section class="popular-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Популярное в каталоге</h2>
+      <a href="catalog.html" class="section-link">Смотреть всё →</a>
+    </div>
+
+    <div class="cards-grid">
+
+      <!-- Card 1 -->
+      <div class="card-v" onclick="location.href='house.html'">
+        <div class="card-v__photo">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#6B8FA8 0%,#3A6580 100%)"></div>
+          <button class="card-v__fav card-v__fav--active" onclick="event.stopPropagation()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#E8530A" stroke="#E8530A" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="card-v__body">
+          <div class="card-v__title">Горки-Сухаревские 1</div>
+          <div class="card-v__features">
+            <div class="card-v__feature">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              </svg>
+              25 мест
+            </div>
+            <div class="card-v__feature">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
+              Бассейн
+            </div>
+            <div class="card-v__feature">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+              </svg>
+              Сауна
+            </div>
+          </div>
+          <div class="card-v__price">от <strong>8 000 ₽</strong> / сутки</div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card-v" onclick="location.href='house.html'">
+        <div class="card-v__photo">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#8BA89C 0%,#5E8573 100%)"></div>
+          <button class="card-v__fav" onclick="event.stopPropagation()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="card-v__body">
+          <div class="card-v__title">Ярославско-Дмитровское шоссе 4</div>
+          <div class="card-v__features">
+            <div class="card-v__feature">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              </svg>
+              35 мест
+            </div>
+            <div class="card-v__feature">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+              </svg>
+              Баня
+            </div>
+          </div>
+          <div class="card-v__price">от <strong>12 480 ₽</strong> / сутки</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card-v" onclick="location.href='house.html'">
+        <div class="card-v__photo">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#7B9EB3 0%,#4A7A9B 100%)"></div>
+          <button class="card-v__fav" onclick="event.stopPropagation()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="card-v__body">
+          <div class="card-v__title">Новая сосновка</div>
+          <div class="card-v__features">
+            <div class="card-v__feature">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              </svg>
+              31 место
+            </div>
+            <div class="card-v__feature">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
+              Бассейн
+            </div>
+            <div class="card-v__feature">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+              </svg>
+              Баня
+            </div>
+          </div>
+          <div class="card-v__price">от <strong>8 000 ₽</strong> / сутки</div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card-v" onclick="location.href='house.html'">
+        <div class="card-v__photo">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#7C9A6E 0%,#4E7A43 100%)"></div>
+          <button class="card-v__fav card-v__fav--active" onclick="event.stopPropagation()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#E8530A" stroke="#E8530A" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="card-v__body">
+          <div class="card-v__title">Лесная поляна</div>
+          <div class="card-v__features">
+            <div class="card-v__feature">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              </svg>
+              15 мест
+            </div>
+            <div class="card-v__feature">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+              </svg>
+              Баня
+            </div>
+          </div>
+          <div class="card-v__price">от <strong>5 500 ₽</strong> / сутки</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="popular-section__more">
+      <a href="catalog.html" class="btn btn--outline">Смотреть все объекты</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CATEGORIES ===================== -->
+<section class="categories-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Можем организовать для Вас</h2>
+    </div>
+
+    <div class="categories-grid">
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+          </svg>
+        </div>
+        <span class="category-card__label">С бассейном</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <span class="category-card__label">Семейный и уютный</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+          </svg>
+        </div>
+        <span class="category-card__label">Корпоратив</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <span class="category-card__label">Под свадьбу</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+          </svg>
+        </div>
+        <span class="category-card__label">С русской баней</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <span class="category-card__label">День рождения</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <span class="category-card__label">Новый год</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          </svg>
+        </div>
+        <span class="category-card__label">С детьми</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <span class="category-card__label">С играми / бильярд</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <span class="category-card__label">С охраной</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          </svg>
+        </div>
+        <span class="category-card__label">На природе</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+        <span class="category-card__label">С документами</span>
+      </div>
+
+    </div>
+
+    <div class="categories-section__btn">
+      <a href="catalog.html" class="btn btn--primary">Подобрать дом</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Частые вопросы</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item is-open">
+        <div class="faq-item__question">
+          <span class="faq-item__text">Как забронировать дом?</span>
+          <div class="faq-item__icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-item__answer">
+          Выберите объект в каталоге, укажите даты и количество гостей, нажмите «Забронировать» и оставьте контакты. Менеджер свяжется с вами в течение 15 минут для подтверждения бронирования.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-item__question">
+          <span class="faq-item__text">Нужна ли предоплата?</span>
+          <div class="faq-item__icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-item__answer">
+          Нет. Бронирование бесплатное и без предоплаты. Оплата производится при заезде — наличными или картой. Это позволяет вам быть уверенными в том, что дом именно такой, как на фото.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-item__question">
+          <span class="faq-item__text">Можно ли приехать с домашними животными?</span>
+          <div class="faq-item__icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-item__answer">
+          Зависит от конкретного объекта. В карточке каждого дома указывается, разрешены ли животные. Если информации нет — уточните у менеджера при бронировании.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-item__question">
+          <span class="faq-item__text">Что входит в стоимость аренды?</span>
+          <div class="faq-item__icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-item__answer">
+          В стоимость входит аренда всего дома с указанными удобствами: баня, бассейн, мангальная зона. Дополнительные услуги (дрова, уборка, трансфер) оплачиваются отдельно и указаны в карточке объекта.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-item__question">
+          <span class="faq-item__text">Можно ли отменить бронирование?</span>
+          <div class="faq-item__icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-item__answer">
+          Да. Поскольку предоплаты нет, отмена бронирования возможна в любое время. Просто позвоните нам или напишите в мессенджер, и мы снимем бронь.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-item__question">
+          <span class="faq-item__text">Как добраться до дома?</span>
+          <div class="faq-item__icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-item__answer">
+          В карточке каждого объекта есть точный адрес и ссылка на карту. Также доступна услуга трансфера от ближайшей станции метро или из центра Казани.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta-section">
+  <div class="cta-section__bg"></div>
+  <div class="container">
+    <div class="cta-section__inner">
+      <h2 class="cta-section__title">Готовы сдать дом?</h2>
+      <p class="cta-section__text">
+        Разместите ваш объект на DOMIKTUT.RU и получайте стабильный доход от аренды. Поможем с фотографиями, описанием и продвижением.
+      </p>
+      <a href="#" class="btn btn--primary">Разместить объект</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <path d="M16 3L2 14h4v15h8v-9h4v9h8V14h4L16 3z" fill="#E8530A"/>
+          </svg>
+          <span class="footer__logo-text">DOMIKTUT.RU</span>
+        </div>
+        <p class="footer__tagline">Аренда коттеджей и загородных домов<br>в Казани и Татарстане</p>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Каталог</div>
+        <ul class="footer__links">
+          <li><a href="#">С бассейном</a></li>
+          <li><a href="#">Семейный и уютный</a></li>
+          <li><a href="#">Игры / продан</a></li>
+          <li><a href="#">Под свадьбы и корпоративы</a></li>
+          <li><a href="#">С русской баней на дровах</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Компания</div>
+        <ul class="footer__links">
+          <li><a href="#">Сотрудничество</a></li>
+          <li><a href="#">Частые вопросы</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contacts">
+        <div class="footer__col-title">Контакты</div>
+        <a href="tel:+78435284548" class="footer__phone">+7 (843) 528-45-48</a>
+        <div class="footer__socials">
+          <a href="#" class="footer__social">ВК</a>
+          <a href="#" class="footer__social">IG</a>
+          <a href="#" class="footer__social">TG</a>
+          <a href="#" class="footer__social">OK</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2024 DOMIKTUT.RU — Аренда загородных домов</div>
+  </div>
+</footer>
+
+<!-- ===================== JS ===================== -->
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-item__question').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = this.closest('.faq-item');
+      var isOpen = item.classList.contains('is-open');
+      // close all
+      document.querySelectorAll('.faq-item').forEach(function(i) {
+        i.classList.remove('is-open');
+      });
+      // open clicked if it was closed
+      if (!isOpen) item.classList.add('is-open');
+    });
+  });
+</script>
+
+</body>
+</html>
