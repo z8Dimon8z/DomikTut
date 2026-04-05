@@ -1,0 +1,54 @@
+/* =============================================
+   DOMIKTUT.RU — Favorites Page Styles
+   ============================================= */
+
+.favorites-page {
+  padding: 32px 0 64px;
+}
+
+.favorites-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.favorites-count {
+  font-size: 14px;
+  color: #6B6B6B;
+}
+
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Empty state for favorites */
+.favorites-empty {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.favorites-empty__icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  color: #D0D0D0;
+}
+
+.favorites-empty__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1C1C1C;
+  margin-bottom: 10px;
+}
+
+.favorites-empty__text {
+  font-size: 14px;
+  color: #6B6B6B;
+  margin-bottom: 28px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}

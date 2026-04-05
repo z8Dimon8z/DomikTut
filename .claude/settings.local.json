@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/yurij_1/Desktop/project -name *.md)",
+      "Bash(ls /Users/yurij_1/DOCKER/docker-compose-lamp/www/prototypes/*.html)",
+      "Bash(grep -l \"Onest\" /Users/yurij_1/DOCKER/docker-compose-lamp/www/prototypes/*.html)"
+    ]
+  }
+}

@@ -1,0 +1,423 @@
+/* =============================================
+   DOMIKTUT.RU — House Page Styles
+   ============================================= */
+
+.house-page {
+  padding: 24px 0 0;
+}
+
+/* --- Gallery --- */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  grid-template-rows: 260px 260px;
+  gap: 8px;
+  margin-bottom: 32px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gallery__main {
+  grid-row: 1 / 3;
+  background: #C8D0D8;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__thumb {
+  background: #D8DFE6;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.gallery__thumb:hover img { transform: scale(1.04); }
+
+.gallery__thumb--more {
+  position: relative;
+}
+
+.gallery__thumb--more::after {
+  content: 'Ещё фото';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Photo placeholders */
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #C5CDD5 0%, #A8B5C0 100%);
+}
+
+/* --- House layout --- */
+.house-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  align-items: flex-start;
+  padding-bottom: 64px;
+}
+
+/* --- House content (left) --- */
+.house-content {}
+
+.house-header {
+  margin-bottom: 20px;
+}
+
+.house-title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.house-address {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #6B6B6B;
+}
+
+.house-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  padding: 20px 0;
+  border-top: 1px solid #F0F0F0;
+  border-bottom: 1px solid #F0F0F0;
+  margin-bottom: 28px;
+}
+
+.house-feature {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #1C1C1C;
+}
+
+.house-feature svg { color: #E8530A; flex-shrink: 0; }
+
+.house-feature__label { color: #6B6B6B; margin-left: 2px; }
+
+/* Section */
+.house-section {
+  margin-bottom: 32px;
+}
+
+.house-section__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.house-section__text {
+  font-size: 14px;
+  color: #3A3A3A;
+  line-height: 1.7;
+}
+
+/* Extra services */
+.extra-services {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.extra-service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #F9F9F9;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.extra-service__name { color: #1C1C1C; }
+.extra-service__price { font-weight: 600; color: #E8530A; }
+
+/* Location */
+.house-location {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.house-video-placeholder {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: #2A2A3E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  cursor: pointer;
+}
+
+.house-video-placeholder__play {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,0.4);
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.house-video-placeholder:hover .house-video-placeholder__play {
+  background: rgba(255,255,255,0.3);
+}
+
+.house-map { min-height: 200px; }
+
+/* Reviews */
+.reviews-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.review-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.review-card__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #E8530A;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.review-card__name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.review-card__date {
+  font-size: 11px;
+  color: #6B6B6B;
+}
+
+.review-card__stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.star {
+  width: 14px;
+  height: 14px;
+  color: #F5A623;
+}
+
+.review-card__text {
+  font-size: 13px;
+  color: #3A3A3A;
+  line-height: 1.6;
+}
+
+/* --- Booking form (right, sticky) --- */
+.booking-card {
+  position: sticky;
+  top: 88px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 24px;
+}
+
+.booking-prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4px;
+  background: #F5F5F5;
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.booking-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 10px 6px;
+  border-radius: 8px;
+  background: transparent;
+  transition: background 0.15s;
+}
+
+.booking-price--active {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.booking-price__label {
+  font-size: 10px;
+  color: #6B6B6B;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.booking-price__value {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1C1C1C;
+}
+
+.booking-price__per {
+  font-size: 10px;
+  color: #6B6B6B;
+}
+
+.booking-total {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 14px 0;
+  border-top: 1px solid #F0F0F0;
+  border-bottom: 1px solid #F0F0F0;
+  margin-bottom: 16px;
+}
+
+.booking-total__label {
+  font-size: 13px;
+  color: #6B6B6B;
+}
+
+.booking-total__value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #E8530A;
+  margin-left: auto;
+}
+
+.booking-total__per {
+  font-size: 13px;
+  color: #6B6B6B;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.booking-form .form-input {
+  height: 40px;
+  font-size: 13px;
+}
+
+.booking-dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.booking-card__note {
+  text-align: center;
+  font-size: 12px;
+  color: #6B6B6B;
+  margin-top: 12px;
+}
+
+.booking-card__ask {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #E8530A;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.booking-card__ask:hover { text-decoration: underline; }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: 1fr 220px;
+    grid-template-rows: 200px 200px;
+  }
+  .reviews-list { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .house-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-card {
+    position: static;
+    order: -1;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gallery__main {
+    grid-row: auto;
+    height: 240px;
+  }
+
+  .gallery__thumb {
+    display: none;
+  }
+
+  .house-location {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-list { grid-template-columns: 1fr; }
+}
